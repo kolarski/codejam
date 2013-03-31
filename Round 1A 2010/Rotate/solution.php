@@ -16,7 +16,7 @@
             }
             return array($handle, $test_case, (int) $N_K[0], (int) $N_K[1]);
         }
-        public function rotateBoard($board, $N)
+        public function simulateRotation($board, $N)
         {
             $empty = str_repeat ('.', $N);
             $new_board = '';
@@ -26,15 +26,7 @@
                 $row = str_replace('.', '', $row);
                 $new_board .= str_pad($row, $N, '.', STR_PAD_LEFT);
             }
-            $new_board2 = '';
-            for($i=0; $i<$N; $i++)
-            {
-                for($j=0; $j<$N; $j++)
-                {
-                    $new_board2 .= $new_board[($N-$j-1)*$N + ($i)];
-                }
-            }
-            return $new_board2;
+            return $new_board;
         }
         public function whoWins($board, $N, $needed)
         {
@@ -136,7 +128,7 @@
     for ($i=0; $i < $T; $i++)
     {
         list($handle, $board, $N, $K) = $task->getNextTestCase($handle);
-        $board = $task->rotateBoard($board, $N);
+        $board = $task->simulateRotation($board, $N);
         $result = $task->whoWins($board, $N, $K);
         $task->appendResult($i+1, $result);
     }
