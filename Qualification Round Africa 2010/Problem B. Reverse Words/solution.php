@@ -23,5 +23,5 @@
     for ($i=0; $i < $T; $i++)
     {
         $msg = $task->getNextTestCase($handle);
-        $task->appendResult($i+1, implode(" ",array_reverse(explode(" ", $msg))));
+        $task->appendResult($i+1, implode(" ", array_reverse(explode(" ", $msg))));
     }
