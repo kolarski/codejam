@@ -13,7 +13,10 @@ Google Code Jam Practice
   * I was shocked by this problem :D
 * **Qualification Round Africa 2010 / А / Store Credit** - [Problem] [3] 
   * Quite easy one .. This qualification round was funny :P
+* **Qualification Round Africa 2010 / C / T9 Spelling** - [Problem] [4] 
+  * Not a real challenge :)
 
 [1]: https://code.google.com/codejam/contest/544101/dashboard
 [2]: https://code.google.com/codejam/contest/351101/dashboard
 [3]: https://code.google.com/codejam/contest/351101/dashboard
+[4]: https://code.google.com/codejam/contest/351101/dashboard
