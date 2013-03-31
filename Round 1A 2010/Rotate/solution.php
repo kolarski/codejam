@@ -47,38 +47,38 @@
                 $row = substr($board, $i*$N, $N);
                 $row1 = str_pad(str_pad('',$i,'.').$row, $N*2-1, '.');
                 $row2 = str_pad($row.str_pad('',$i,'.'), $N*2-1, '.', STR_PAD_LEFT);
-                for($jj=0; $jj<$N*2-1; $jj++)
+                for($d=0; $d<$N*2-1; $d++)
                 {
                     if (!$R_OK) {
-                        if ($row1[$jj] == "R")
+                        if ($row1[$d] == "R")
                         {
-                            $R_dia1[$jj] += 1;
-                            if ($R_dia1[$jj] >= $needed) $R_OK = true;
+                            $R_dia1[$d] += 1;
+                            if ($R_dia1[$d] >= $needed) $R_OK = true;
                         } else {
-                            $R_dia1[$jj] = 0;
+                            $R_dia1[$d] = 0;
                         }
-                        if ($row2[$jj] == "R")
+                        if ($row2[$d] == "R")
                         {
-                            $R_dia2[$jj] += 1;
-                            if ($R_dia2[$jj] >= $needed) $R_OK = true;
+                            $R_dia2[$d] += 1;
+                            if ($R_dia2[$d] >= $needed) $R_OK = true;
                         } else {
-                            $R_dia2[$jj] = 0;
+                            $R_dia2[$d] = 0;
                         }
                     }
                     if (!$B_OK) {
-                        if ($row1[$jj] == "B")
+                        if ($row1[$d] == "B")
                         {
-                            $B_dia1[$jj] += 1;
-                            if ($B_dia1[$jj] >= $needed) $B_OK = true;
+                            $B_dia1[$d] += 1;
+                            if ($B_dia1[$d] >= $needed) $B_OK = true;
                         } else {
-                            $B_dia1[$jj] = 0;
+                            $B_dia1[$d] = 0;
                         }
-                        if ($row2[$jj] == "B")
+                        if ($row2[$d] == "B")
                         {
-                            $B_dia2[$jj] += 1;
-                            if ($B_dia2[$jj] >= $needed) $B_OK = true;
+                            $B_dia2[$d] += 1;
+                            if ($B_dia2[$d] >= $needed) $B_OK = true;
                         } else {
-                            $B_dia2[$jj] = 0;
+                            $B_dia2[$d] = 0;
                         }
                     }
                 }
